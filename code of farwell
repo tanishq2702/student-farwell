@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Farewell Event</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #details {
+            display: none;
+            margin-top: 20px;
+        }
+        .qr-section {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Farewell Event</h2>
+        <p>Click the button below to view the event details.</p>
+        <button onclick="showDetails()">Show Details</button>
+        <div id="details">
+            <h3>Event Details</h3>
+            <p><strong>Date:</strong> March 10, 2025</p>
+            <p><strong>Time:</strong> 5:00 PM - 9:00 PM</p>
+            <p><strong>Venue:</strong> School Auditorium</p>
+            <p><strong>Dress Code:</strong> Formal</p>
+            <p>Join us for an unforgettable evening filled with memories, performances, and celebrations!</p>
+        </div>
+        <div class="qr-section">
+            <h3>Scan to View More Details</h3>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://your-netlify-url.netlify.app" alt="QR Code">
+        </div>
+    </div>
+    <script>
+        function showDetails() {
+            document.getElementById('details').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
